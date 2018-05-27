@@ -11,6 +11,7 @@
             <a href="@routes.BooksController.getBookById(book.getId())">@book.getTitle()</a>
             <p>price: @book.getPrice()</p>
             <p>author: @book.getAuthor()</p>
+            <p><a href="@routes.BooksController.editBookForm(book.getId())">edit</a></p>
         }
         <hr>
 
