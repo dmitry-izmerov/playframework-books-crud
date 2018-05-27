@@ -2,7 +2,6 @@ package repositories;
 
 import models.Book;
 
-import java.math.BigDecimal;
 import java.util.*;
 
 public class BookRepositorySimpleImpl implements BookRepository {

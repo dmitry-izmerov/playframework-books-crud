@@ -1,22 +1,16 @@
 @(books: List[Book])
 
-<html>
-    <head>
-        <title>All books</title>
-    </head>
-    <body>
-        <h1>All books:</h1>
+@main("All books", null) {
+    @for(book <- books) {
+        <a href="@routes.BooksController.getBookById(book.getId())">@book.getTitle()</a>
+        <p>price: @book.getPrice()</p>
+        <p>author: @book.getAuthor()</p>
+        <p><a href="@routes.BooksController.editBookForm(book.getId())">edit</a></p>
+        <p><a href="@routes.BooksController.deleteBook(book.getId())">delete</a></p>
+    }
+    <hr>
 
-        @for(book <- books) {
-            <a href="@routes.BooksController.getBookById(book.getId())">@book.getTitle()</a>
-            <p>price: @book.getPrice()</p>
-            <p>author: @book.getAuthor()</p>
-            <p><a href="@routes.BooksController.editBookForm(book.getId())">edit</a></p>
-        }
-        <hr>
-
-        <p>
-            <a href="@routes.BooksController.createBookForm()">Create book</a>
-        </p>
-    </body>
-</html>
+    <p>
+        <a href="@routes.BooksController.createBookForm()">Create book</a>
+    </p>
+}

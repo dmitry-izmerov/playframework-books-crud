@@ -55,7 +55,8 @@ public class BooksController extends Controller {
     }
 
     public Result deleteBook(int bookId) {
-        return TODO;
+        bookRepository.deleteById(bookId);
+        return redirect(routes.BooksController.getAll());
     }
 
     public Result getBookDetails(int bookId) {

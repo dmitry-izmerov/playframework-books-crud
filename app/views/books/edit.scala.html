@@ -1,22 +1,13 @@
 @(bookForm: Form[Book], bookId: Integer)
 @import helper._
 
-<html>
-    <head>
-        <title>Edit book</title>
-    </head>
-    <body>
-        <h1>Edit book:</h1>
+@main("Edit book", "Edit book:") {
+    @helper.form(action = routes.BooksController.saveBook(bookId)) {
+        @helper.inputText(bookForm("title"))
+        @helper.inputText(bookForm("price"))
+        @helper.inputText(bookForm("author"))
 
-        @helper.form(action = routes.BooksController.saveBook(bookId)) {
-            @helper.inputText(bookForm("id"))
-            @helper.inputText(bookForm("title"))
-            @helper.inputText(bookForm("price"))
-            @helper.inputText(bookForm("author"))
-
-            @CSRF.formField
-            <input type="submit" value="Edit book">
-        }
-
-    </body>
-</html>
+        @CSRF.formField
+        <input type="submit" value="Edit book">
+    }
+}

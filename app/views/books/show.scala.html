@@ -1,13 +1,7 @@
 @(book: Book)
 
-<html>
-    <head>
-        <title>@book.getTitle</title>
-    </head>
-    <body>
-        <h2>#@book.getId</h2>
-        <p>Title: @book.getTitle</p>
-        <p>Price: @book.getPrice</p>
-        <p>Author: @book.getAuthor</p>
-    </body>
-</html>
+@main(book.getTitle, "#" + book.getId) {
+    <p>Title: @book.getTitle</p>
+    <p>Price: @book.getPrice</p>
+    <p>Author: @book.getAuthor</p>
+}

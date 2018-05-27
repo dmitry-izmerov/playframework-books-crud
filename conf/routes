@@ -9,7 +9,7 @@ GET         /books                       controllers.BooksController.getAll
 GET         /books/:id                   controllers.BooksController.getBookById(id: Integer)
 POST        /books                       controllers.BooksController.createBook
 POST        /books/:id                   controllers.BooksController.saveBook(id: Integer)
-POST        /books/:id/delete            controllers.BooksController.deleteBook(id: Integer)
+GET         /books/:id/delete            controllers.BooksController.deleteBook(id: Integer)
 GET         /books/:id/details           controllers.BooksController.getBookDetails(id: Integer)
 
 GET         /forms/books/create          controllers.BooksController.createBookForm()
