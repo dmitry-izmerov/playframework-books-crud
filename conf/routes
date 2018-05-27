@@ -12,7 +12,6 @@ POST        /books/:id                   controllers.BooksController.saveBook(id
 POST        /books/:id/delete            controllers.BooksController.deleteBook(id: Integer)
 GET         /books/:id/details           controllers.BooksController.getBookDetails(id: Integer)
 
-GET         /forms/books                 controllers.BooksController.indexForm()
 GET         /forms/books/create          controllers.BooksController.createBookForm()
 GET         /forms/books/:id/edit        controllers.BooksController.editBookForm(id: Integer)
 
