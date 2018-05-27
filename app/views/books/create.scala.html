@@ -1,0 +1,22 @@
+@(bookForm: Form[Book])
+@import helper._
+
+<html>
+    <head>
+        <title>Create book</title>
+    </head>
+    <body>
+        <h1>Create book:</h1>
+
+        @helper.form(action = routes.BooksController.createBook()) {
+            @helper.inputText(bookForm("id"))
+            @helper.inputText(bookForm("title"))
+            @helper.inputText(bookForm("price"))
+            @helper.inputText(bookForm("author"))
+
+            @CSRF.formField
+            <input type="submit" value="Create book">
+        }
+
+    </body>
+</html>

@@ -12,5 +12,8 @@ PUT           /books/:id                controllers.BooksController.saveBook(id:
 DELETE        /books/:id                controllers.BooksController.deleteBook(id: Integer)
 GET           /books/:id/details        controllers.BooksController.getBookDetails(id: Integer)
 
+GET           /forms/books              controllers.BooksController.indexForm()
+GET           /forms/books/create       controllers.BooksController.createBookForm()
+
 # Map static resources from the /public folder to the /assets URL path
 GET           /assets/*file             controllers.Assets.versioned(path="/public", file: Asset)
