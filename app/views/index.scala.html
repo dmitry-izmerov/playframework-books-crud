@@ -1,0 +1,24 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Main page of simple books crud app based on play framework 2") {
+
+    <h3>Available urls:</h3>
+    <ul>
+        <li>GET           /books                    get list of books</li>
+        <li>GET           /books/:id                get book by id</li>
+        <li>POST          /books                    create book</li>
+        <li>PUT           /books/:id                update book</li>
+        <li>DELETE        /books/:id                remove book</li>
+        <li>GET           /books/:id/details        get details from book by id</li>
+    </ul>
+
+}
