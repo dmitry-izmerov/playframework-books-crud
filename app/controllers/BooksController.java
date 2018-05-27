@@ -59,10 +59,6 @@ public class BooksController extends Controller {
         return redirect(routes.BooksController.getAll());
     }
 
-    public Result getBookDetails(int bookId) {
-        return TODO;
-    }
-
     public Result createBookForm() {
         Form<Book> bookForm = formFactory.form(Book.class);
         return ok(create.render(bookForm));

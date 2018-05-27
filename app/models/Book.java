@@ -1,13 +1,21 @@
 package models;
 
-import java.math.BigDecimal;
+import io.ebean.Finder;
+import io.ebean.Model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
-public class Book {
+@Entity
+public class Book extends Model {
+    @Id
     private Integer id;
     private String title;
     private double price;
     private String author;
+
+    public static final Finder<Integer, Book> finder = new Finder<>(Book.class);
 
     public Book() {
     }
