@@ -9,9 +9,9 @@ public class BookRepositorySimpleImpl implements BookRepository {
     private static Set<Book> books = new HashSet<>();
 
     static {
-        books.add(new Book(1, "Effective Java", new BigDecimal(27.79), "Joshua Bloch"));
-        books.add(new Book(2, "Head First Design Patterns", new BigDecimal(36.36), "Eric Freeman"));
-        books.add(new Book(3, "Java Concurrency in Practice", new BigDecimal(15.87), "Brian Goetz"));
+        books.add(new Book(1, "Effective Java", 27.79, "Joshua Bloch"));
+        books.add(new Book(2, "Head First Design Patterns", 36.36, "Eric Freeman"));
+        books.add(new Book(3, "Java Concurrency in Practice", 15.87, "Brian Goetz"));
     }
 
     @Override

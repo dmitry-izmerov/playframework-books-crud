@@ -6,10 +6,10 @@ import java.util.Objects;
 public class Book {
     private Integer id;
     private String title;
-    private BigDecimal price;
+    private double price;
     private String author;
 
-    public Book(int id, String title, BigDecimal price, String author) {
+    public Book(int id, String title, double price, String author) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -32,11 +32,11 @@ public class Book {
         this.title = title;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
