@@ -1,8 +1,4 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
-@(message: String)
+@()
 
 @*
  * Call the `main` template with two arguments. The first
@@ -13,12 +9,11 @@
 
     <h3>Available urls:</h3>
     <ul>
-        <li>GET           /books                    get list of books</li>
-        <li>GET           /books/:id                get book by id</li>
-        <li>POST          /books                    create book</li>
-        <li>PUT           /books/:id                update book</li>
-        <li>DELETE        /books/:id                remove book</li>
-        <li>GET           /books/:id/details        get details from book by id</li>
+        <li><pre>GET           /books                    get list of books</pre></li>
+        <li><pre>GET           /books/:id                get book by id</pre></li>
+        <li><pre>POST          /books                    create book</pre></li>
+        <li><pre>PUT           /books/:id                update book</pre></li>
+        <li><pre>DELETE        /books/:id                remove book</pre></li>
+        <li><pre>GET           /books/:id/details        get details from book by id</pre></li>
     </ul>
-
 }

@@ -1,6 +1,7 @@
 package controllers;
 
 import play.mvc.*;
+import views.html.index;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -9,6 +10,6 @@ import play.mvc.*;
 public class HomeController extends Controller {
 
     public Result index() {
-        return ok("Hello from play framework 2!");
+        return ok(index.render());
     }
 }
